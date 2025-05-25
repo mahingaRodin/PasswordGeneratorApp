@@ -12,6 +12,7 @@ import com.securePassword.secPassGen.generator.RandomCharacterGenerator;
 import com.securePassword.secPassGen.generator.RandomCharacterGeneratorImpl;
 import com.securePassword.secPassGen.processor.ArgumentProcessor;
 import com.securePassword.secPassGen.processor.ArgumentProcessorImpl;
+import com.securePassword.secPassGen.saver.PasswordRecordSaver;
 import com.securePassword.secPassGen.shuffler.StringShuffler;
 import com.securePassword.secPassGen.shuffler.StringShufflerImpl;
 
@@ -24,6 +25,7 @@ public class GuiceModule extends AbstractModule {
         bind(RandomCharacterGenerator.class).to(RandomCharacterGeneratorImpl.class);
         bind(StringShuffler.class).to(StringShufflerImpl.class);
         bind(Terminal.class).to(TerminalImpl.class);
+        bind(PasswordRecordSaver.class);
         bind(App.class).to(AppImpl.class);
     }
 }
